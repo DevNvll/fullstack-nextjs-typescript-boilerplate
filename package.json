@@ -1,0 +1,22 @@
+{
+  "private": true,
+  "scripts": {
+    "clean": "lerna clean",
+    "bootstrap": "lerna bootstrap",
+    "test": "CI=true lerna run test --stream",
+    "start": "lerna run --parallel start",
+    "dev": "lerna run --parallel dev",
+    "prepare": "lerna run prepare",
+    "build": "npm run prepare && lerna run --parallel build"
+  },
+  "devDependencies": {
+    "@types/node": "^8.0.28",
+    "lerna": "2.8.0",
+    "rimraf": "^2.6.2",
+    "typescript": "^2.5.2"
+  },
+  "workspaces": [
+    "web",
+    "server"
+  ]
+}
